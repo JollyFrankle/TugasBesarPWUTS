@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if($_SESSION["id"] ?? false){
+    header("Location: ../page/homePage.php");
+}
+?>
+
 <!Doctype html>
 <html lang="en">
 
@@ -7,8 +15,8 @@
     <!-- bootstrap 5.2.1 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link href="../style.css" rel="stylesheet">
-    <title>Login Page</title>
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <title>Register Page</title>
 </head>
 
 <body>
@@ -32,13 +40,14 @@
                             <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                         </div>
                         <div class="mb-3">
-                            <input class="form-control" id="formFileSm" type="file" required>
+                            <label for="formFileSm" class="form-label" >Upload Foto Pengguna</label>
+                            <input class="form-control" id="formFileSm" type="file" name="foto" required accept=".jpg, .jpeg, .png">
                         </div>
                         <div class="d-grid gap-2">
                             <button type="submit" class="btn btn-primary" name="action" value="register">Register</button>
                         </div>
                     </form>
-                    <p class="mt-2 mb-0">have an account yet? <a href="./LoginPage.php" class="textprimary">Click here!</a></p>
+                    <p class="mt-3 mb-0">Already have an account? <a href="./LoginPage.php">Click here!</a></p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
+@font-face {
+    font-family: 'Minecraft';
+    font-weight: normal;
+    src: url("../font/MinecraftRegular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    font-weight: bold;
+    src: url("../font/MinecraftBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    font-style: italic;
+    src: url("../font/MinecraftItalic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    font-weight: bold;
+    font-style: italic;
+    src: url("../font/MinecraftBoldItalic.otf") format("opentype");
+}
+
+:root {
+    --jc-sidebar-width: 280px;
+    --bs-font-sans-serif: 'Minecraft';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: bold;
+}
+
+.bg {
+    background-color: #000;
+    background-image: url("../images/bgLogin.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-tint {
+    background-color: rgba(0, 0, 0, 20%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.body-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container-25rem {
+    width: 100%;
+    max-width: 25rem;
+}
+
+.img-btmright,
+.img-btmleft {
+    height: 7rem;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.img-btmright>img,
+.img-btmleft>img {
+    width: 8rem;
+}
+
+.img-btmright {
+    text-align: end;
+}
+
+.img-btmleft {
+    text-align: start;
+
+}
+.gambar-buku,
+.gambar-buku-sm {
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: .25rem;
+}
+
+.gambar-buku {
+    height: 250px;
+}
+
+.gambar-buku-sm {
+    height: 150px;
+}
+
+.mc-icon {
+    image-rendering: pixelated;
+}
+
+/* List styling */
+ul.list-custom {
+    list-style-type: square;
+    padding-left: 1.2rem;
+}
+
+ul.list-custom>li {
+    padding-left: .55rem;
+    margin-bottom: .5rem;
+}
+
+ol.list-custom {
+    list-style-type: none;
+    padding-left: 1.75rem;
+    counter-reset: this_numlist;
+}
+
+ol.list-custom>li {
+    display: block;
+    margin-bottom: .5rem;
+    position: relative;
+}
+
+ol.list-custom>li::before {
+    counter-increment: this_numlist;
+    content: counter(this_numlist) ".";
+    display: block;
+    margin-left: -1.75rem;
+    width: 1.75rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: absolute;
+}
+
+.villager {
+    height: 10vw;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    transform: scaleX(-1);
+    pointer-events: none;
+}

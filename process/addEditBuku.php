@@ -1,57 +1,48 @@
 <?php
-include '../db.php';
-
 session_start();
-if($_SESSION["id"] ?? false){
-    header("Location: ../page/homePage.php");
+if (!($_SESSION["id"] ?? false) || !($_SESSION["user"]["role"] ?? false == "admin")) {
+	header("Location: ./loginPage.php");
 }
 
-$out_msg = ["Request method atau parameter tidak valid. Pastikan Anda mengakses halaman ini melalui form login."];
+include '../db.php';
+
+$out_msg = ["Metode tidak valid!"];
 $output = [
     "code" => 401,
     "message" => &$out_msg
 ];
 
-
-if($_POST["action"] ?? "" == "register") {
-    // Reset output message
+if($_POST["action"] == "add" || $_POST["action"] == "edit") {
+    // Reset output
     $out_msg = [];
 
-    $email = $_POST["email"] ?? null;
-    $password = $_POST["password"] ?? null;
-    $nama = $_POST["nama"] ?? null;
+    $judul = $_POST["judul"] ?? null;
+    $jumlah = intval($_POST["jumlah"] ?? -1);
     $error = false;
 
-    if(!$email || !$password || !$nama) {
+    $id_buku = intval($_POST["id_buku"] ?? "0");
+
+    if(empty($judul) || $jumlah < 0) {
         $error = true;
-        $out_msg[] = "Semua field harus diisi.";
+        $out_msg[] = "Semua field harus diisi!";
+    }
+    
+    // if action is edit, then id_buku must be provided
+    if($_POST["action"] == "edit" && $id_buku == 0) {
+        $error = true;
+        $out_msg[] = "ID buku tidak valid!";
     }
 
-    // check if email already exist
-    $sql = "SELECT * FROM users WHERE email = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    if($result->num_rows > 0) {
+    // if action is add, then gambar must be uploaded
+    if($_POST["action"] == "add" && !($_FILES["gambar"] ?? true)) {
         $error = true;
-        $out_msg[] = "Email sudah terdaftar.";
-    }
-
-    if(strlen($password) < 8) {
-        $error = true;
-        $out_msg[] = "Password minimal 8 karakter!";
+        $out_msg[] = "Gambar sampul buku harus diupload!";
     }
 
     $fileNameNew = null;
-    if(empty($_FILES["foto"]["name"] ?? "") && !$error) {
-        $error = true;
-        $out_msg[] = "Foto tidak boleh kosong.";
-    }
-    
-    if(!$error) {
+    if(!empty($_FILES["gambar"]["name"] ?? "") && !$error) {
         // handle file upload
-        $file = $_FILES["foto"] ?? null;
+        $file = $_FILES["gambar"] ?? null;
         $fileName = $file["name"] ?? null;
         $fileTmpName = $file["tmp_name"] ?? null;
         // check
@@ -65,9 +56,20 @@ if($_POST["action"] ?? "" == "register") {
             if(in_array($fileActualExt, $allowed)) {
                 if($fileError === 0) {
                     if($fileSize < 2*1024*1024) {
-                        $fileNameNew = uniqid("fotouser_", true) . "." . $fileActualExt;
+                        $fileNameNew = uniqid("fotobuku_", true) . "." . $fileActualExt;
                         $fileDestination = "../uploads/" . $fileNameNew;
                         move_uploaded_file($fileTmpName, $fileDestination);
+
+                        // Delete old file
+                        $sql = "SELECT gambar FROM buku WHERE id = ?";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bind_param("i", $id_buku);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+                        $old_foto = $result->fetch_column();
+                        if($old_foto) {
+                            unlink("../uploads/" . $old_foto);
+                        }
                     } else {
                         $error = true;
                         $out_msg[] = "Ukuran file terlalu besar.";
@@ -86,22 +88,29 @@ if($_POST["action"] ?? "" == "register") {
     }
 
     if(!$error) {
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users (`email`, `password`, `nama`, `foto`, `role`) VALUES (?, ?, ?, ?, 'user')";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssss", $email, $password, $nama, $fileNameNew);
-        if($stmt->execute()) {
-            $output = [
-                "code" => 200
-            ];
-        } else {
-            $output = [
-                "code" => 500,
-                "message" => [
-                    "Terjadi kesalahan pada server. Silahkan coba lagi."
-                ]
-            ];
+        if($_POST["action"] == "add") {
+            $sql = "INSERT INTO buku (judul, jumlah, gambar) VALUES (?, ?, ?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("sis", $judul, $jumlah, $fileNameNew);
+            $stmt->execute();
+            $out_msg[] = "Buku berhasil ditambahkan!";
         }
+        if($_POST["action"] == "edit") {
+            if($fileNameNew) {
+                $sql = "UPDATE buku SET judul = ?, jumlah = ?, gambar = ? WHERE id = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("sisi", $judul, $jumlah, $fileNameNew, $id_buku);
+            } else {
+                $sql = "UPDATE buku SET judul = ?, jumlah = ? WHERE id = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("sii", $judul, $jumlah, $id_buku);
+            }
+            $stmt->execute();
+            $out_msg[] = "Buku berhasil diubah!";
+        }
+        $output["code"] = 200;
+    } else {
+        $output["code"] = 400;
     }
 }
 ?>
@@ -113,7 +122,7 @@ if($_POST["action"] ?? "" == "register") {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link href="../assets/css/style.css" rel="stylesheet">
-    <title>Log in Process</title>
+    <title>Add/Edit Buku Process</title>
 </head>
 <body class="body-flex-center bg">
     <div class="background-tint"></div>
@@ -121,10 +130,14 @@ if($_POST["action"] ?? "" == "register") {
     <?php if($output["code"] == 200) { 
         /* Kalau sudah tidak ada salah, arahkan untuk login: */ ?>
         <div class="card" role="alert">
-            <div class="card-header bg-success bg-opacity-25 fw-bold">Selamat datang!</div>
+            <div class="card-header bg-success bg-opacity-25 fw-bold">Berhasil!</div>
             <div class="card-body">
-                <p class="card-text">Silakan klik tombol di bawah ini untuk lanjut ke log in:</p>
-                <a href="../page/loginPage.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Log in</a>
+                <ul class="list-custom mb-0">
+                <?php foreach($output["message"] as $message) { ?>
+                    <li><?php echo $message;?></li>
+                <?php } ?>
+                </ul>
+                <a href="../page/HomeAdmin.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Kembali ke Dashboard</a>
             </div>
             <div class="img-btmleft">
                 <img src="../assets/images/mc-villager.png" alt="Librarian villager" />

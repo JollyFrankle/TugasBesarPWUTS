@@ -1,36 +1,35 @@
 <?php
-include '../db.php';
-
 session_start();
-if($_SESSION["id"] ?? false){
-    header("Location: ../page/homePage.php");
+if (!($_SESSION["id"] ?? false)) {
+	header("Location: ./loginPage.php");
 }
 
-$out_msg = ["Request method atau parameter tidak valid. Pastikan Anda mengakses halaman ini melalui form login."];
+include '../db.php';
+
+$out_msg = ["Metode tidak valid!"];
 $output = [
     "code" => 401,
     "message" => &$out_msg
 ];
 
-
-if($_POST["action"] ?? "" == "register") {
+if($_POST["action"] == "edit_user") {
     // Reset output message
     $out_msg = [];
 
-    $email = $_POST["email"] ?? null;
-    $password = $_POST["password"] ?? null;
-    $nama = $_POST["nama"] ?? null;
     $error = false;
+    $nama = $_POST["nama"] ?? "";
+    $email = $_POST["email"] ?? $_SESSION["user"]["email"]; // fallback karena kalau input 'disabled', maka tidak akan dikirim ke sini
+    $password = $_POST["password"] ?? "";
 
-    if(!$email || !$password || !$nama) {
+    if(empty($nama) && empty($email)) {
         $error = true;
-        $out_msg[] = "Semua field harus diisi.";
+        $out_msg[] = "Nama dan email tidak boleh kosong!";
     }
 
     // check if email already exist
-    $sql = "SELECT * FROM users WHERE email = ?";
+    $sql = "SELECT * FROM users WHERE email = ? AND id != ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
+    $stmt->bind_param("si", $email, $_SESSION["id"]);
     $stmt->execute();
     $result = $stmt->get_result();
     if($result->num_rows > 0) {
@@ -38,18 +37,17 @@ if($_POST["action"] ?? "" == "register") {
         $out_msg[] = "Email sudah terdaftar.";
     }
 
-    if(strlen($password) < 8) {
-        $error = true;
-        $out_msg[] = "Password minimal 8 karakter!";
+    if(!empty($password)) {
+        // if(strlen($password) < 8) {
+        //     $error = true;
+        //     $out_msg[] = "Password minimal 8 karakter!";
+        // } else {
+            $password = password_hash($password, PASSWORD_DEFAULT);
+        // }
     }
 
     $fileNameNew = null;
-    if(empty($_FILES["foto"]["name"] ?? "") && !$error) {
-        $error = true;
-        $out_msg[] = "Foto tidak boleh kosong.";
-    }
-    
-    if(!$error) {
+    if(!empty($_FILES["foto"]["name"] ?? "") && !$error) {
         // handle file upload
         $file = $_FILES["foto"] ?? null;
         $fileName = $file["name"] ?? null;
@@ -64,10 +62,21 @@ if($_POST["action"] ?? "" == "register") {
             $allowed = ["jpg", "jpeg", "png"];
             if(in_array($fileActualExt, $allowed)) {
                 if($fileError === 0) {
-                    if($fileSize < 2*1024*1024) {
+                    if($fileSize < 8*1024*1024) {
                         $fileNameNew = uniqid("fotouser_", true) . "." . $fileActualExt;
                         $fileDestination = "../uploads/" . $fileNameNew;
                         move_uploaded_file($fileTmpName, $fileDestination);
+
+                        // Delete old file
+                        $sql = "SELECT foto FROM users WHERE id = ?";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bind_param("i", $_SESSION["id"]);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+                        $old_foto = $result->fetch_column();
+                        if($old_foto) {
+                            unlink("../uploads/" . $old_foto);
+                        }
                     } else {
                         $error = true;
                         $out_msg[] = "Ukuran file terlalu besar.";
@@ -86,24 +95,47 @@ if($_POST["action"] ?? "" == "register") {
     }
 
     if(!$error) {
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users (`email`, `password`, `nama`, `foto`, `role`) VALUES (?, ?, ?, ?, 'user')";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssss", $email, $password, $nama, $fileNameNew);
+        if($fileNameNew && $password) {
+            $sql = "UPDATE users SET `nama` = ?, `email` = ?, `password` = ?, `foto` = ? WHERE id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("ssssi", $nama, $email, $password, $fileNameNew, $_SESSION["id"]);
+        } else if($fileNameNew) {
+            echo "aAAAAA";
+            $sql = "UPDATE users SET `nama` = ?, `email` = ?, `foto` = ? WHERE id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("sssi", $nama, $email, $fileNameNew, $_SESSION["id"]);
+        } else if($password) {
+            $sql = "UPDATE users SET `nama` = ?, `email` = ?, `password` = ? WHERE id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("sssi", $nama, $email, $password, $_SESSION["id"]);
+        } else {
+            $sql = "UPDATE users SET `nama` = ?, `email` = ? WHERE id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("ssi", $nama, $email, $_SESSION["id"]);
+        }
         if($stmt->execute()) {
             $output = [
                 "code" => 200
             ];
+
+            // Update session
+            $sql = "SELECT * FROM users WHERE id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("i", $_SESSION["id"]);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $_SESSION["user"] = $result->fetch_assoc();
         } else {
             $output = [
                 "code" => 500,
                 "message" => [
-                    "Terjadi kesalahan pada server. Silahkan coba lagi."
+                    "Terjadi kesalahan saat mengubah data user."
                 ]
             ];
         }
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -113,7 +145,7 @@ if($_POST["action"] ?? "" == "register") {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link href="../assets/css/style.css" rel="stylesheet">
-    <title>Log in Process</title>
+    <title>User Process</title>
 </head>
 <body class="body-flex-center bg">
     <div class="background-tint"></div>
@@ -121,10 +153,10 @@ if($_POST["action"] ?? "" == "register") {
     <?php if($output["code"] == 200) { 
         /* Kalau sudah tidak ada salah, arahkan untuk login: */ ?>
         <div class="card" role="alert">
-            <div class="card-header bg-success bg-opacity-25 fw-bold">Selamat datang!</div>
+            <div class="card-header bg-success bg-opacity-25 fw-bold">Perubahan data berhasil!</div>
             <div class="card-body">
-                <p class="card-text">Silakan klik tombol di bawah ini untuk lanjut ke log in:</p>
-                <a href="../page/loginPage.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Log in</a>
+                <p class="card-text">Silakan klik tombol ini untuk kembali ke halaman profil:</p>
+                <a href="../page/ShowProfil.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Lihat Profile</a>
             </div>
             <div class="img-btmleft">
                 <img src="../assets/images/mc-villager.png" alt="Librarian villager" />

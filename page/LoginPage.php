@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if($_SESSION["id"] ?? false){
+    header("Location: ../page/homePage.php");
+}
+?>
+
 <!Doctype html>
 <html lang="en">
 
@@ -7,7 +15,7 @@
     <!-- bootstrap 5.2.1 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link href="../style.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
     <title>Login Page</title>
 </head>
 
@@ -19,7 +27,6 @@
                 <div class="card-header fw-bold">Login</div>
                 <div class="card-body">
                     <form action="../process/login.php" method="post">
-                        <!-- <img src="../assets/image/writable_book.png" class="mc-icon" width="400px"> -->
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
                             <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
@@ -29,11 +36,10 @@
                             <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                         </div>
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary" name="login">Login</button>
+                            <button type="submit" class="btn btn-primary" name="action" value="login">Login</button>
                         </div>
                     </form>
-                    <p class="mt-2 mb-0">Don't have an account yet? <a href="./registerPage.php"
-                            class="textprimary">Click here!</a></p>
+                    <p class="mt-3 mb-0">Don't have an account yet? <a href="./registerPage.php">Click here!</a></p>
                 </div>
             </div>
         </div>

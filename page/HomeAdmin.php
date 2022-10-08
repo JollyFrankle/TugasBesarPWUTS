@@ -4,15 +4,15 @@
     <img src="../assets/images/mc-villager.png" class="villager"/>
 </div>
 <hr>
-<div class="table-responsive">
-    <table class="table table-hover rounded rounded-1 overflow-hidden">
+<div class="table-responsive" style="margin-bottom:15vw;">
+    <table class="table table-hover rounded rounded-1 overflow-hidden align-middle">
         <thead class="text-nowrap">
             <tr class="table-dark">
-                <th scope="col">No</th>
-                <th scope="col">Nama Buku</th>
-                <th scope="col" style="text-align:center">Gambar</th>
-                <th scope="col" style="text-align:center">Jumlah Tersedia</th>
-                <th></th>
+                <th scope="col" class="text-center">No</th>
+                <th scope="col">Judul Buku</th>
+                <th scope="col" class="text-center">Gambar</th>
+                <th scope="col" class="text-center">Jumlah Tersedia</th>
+                <th scope="col" class="text-center">Edit / Hapus</th>
             </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -24,12 +24,12 @@
             } else {
                 $no = 1;
                 while ($data = mysqli_fetch_assoc($query)) { ?>
-                    <tr class="align-middle" style="text-align:center">
-                        <th scope="row"><?php echo $no; ?></th>
+                    <tr>
+                        <th scope="row" class="text-center"><?php echo $no; ?></th>
                         <td><?php echo $data['judul']; ?></td>
-                        <td style="text-align:center"><img src="../uploads/<?php echo $data['gambar']; ?>" class="gambar-buku-sm"/></td>
-                        <td><?php echo $data['jumlah']; ?></td>
-                        <td>
+                        <td class="text-center"><img src="../uploads/<?php echo $data['gambar']; ?>" class="gambar-buku-sm"/></td>
+                        <td class="text-center"><?php echo $data['jumlah']; ?></td>
+                        <td class="text-center">
                             <a href='./EditBuku.php?id=<?php echo $data['id']; ?>' class="btn btn-light">
                                 <img src="../assets/images/mc-icons/netherite_pickaxe.png" class="mc-icon" width="30rem" />
                             </a>

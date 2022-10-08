@@ -104,11 +104,27 @@ h6,
 }
 
 .gambar-buku {
-    height: 250px;
+    width: 250px;
 }
 
 .gambar-buku-sm {
-    height: 150px;
+    width: 150px;
+}
+
+.gambar-ruang,
+.gambar-ruang-sm {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background-color: #fff;
+    border-radius: .25rem;
+}
+
+.gambar-ruang {
+    width: 250px;
+}
+
+.gambar-ruang-sm {
+    width: 150px;
 }
 
 .mc-icon {
@@ -156,4 +172,38 @@ ol.list-custom>li::before {
     right: 20px;
     transform: scaleX(-1);
     pointer-events: none;
+    z-index:1000;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.villager2 {
+    height: 220px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Form Control untuk Background Dark */
+.form-dark .form-control {
+    background-color: var(--bs-black);
+    border-color: var(--bs-secondary);
+    color: #fff;
+}
+
+.form-dark .form-control:focus {
+    background-color: var(--bs-black);
+    color: #fff;
+}
+
+.form-dark .input-group-text {
+    background-color: var(--bs-black);
+    border-color: var(--bs-secondary);
+    color: #fff;
 }

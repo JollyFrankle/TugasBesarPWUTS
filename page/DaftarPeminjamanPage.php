@@ -12,11 +12,11 @@
     Halaman ini menampilkan daftar buku yang kamu pinjam. Jika kamu ingin mengembalikan buku, silahkan klik tombol <strong>Kembalikan</strong>.
 </div>
 
-<div class="table-responsive">
+<div class="table-responsive" style="margin-bottom:15vw;">
     <table class="table table-hover rounded rounded-1 overflow-hidden ">
         <thead class="text-nowrap">
             <tr class="table-dark">
-                <th scope="col">No</th>
+                <th scope="col" style="text-align:center">No</th>
                 <th scope="col">Nama Buku</th>
                 <th scope="col" style="text-align:center">Gambar</th>
                 <th scope="col" style="text-align:center">Status</th>
@@ -37,15 +37,15 @@
             } else {
                 $no = 1;
                 while ($data = $result->fetch_assoc()) { ?>
-                    <tr class="align-middle" style="text-align:center">
-                        <th scope="row"><?php echo $no; ?></th>
+                    <tr class="align-middle">
+                        <th scope="row" style="text-align:center"><?php echo $no; ?></th>
                         <td><?php echo $data['judul']; ?></td>
-                        <td><img src="../uploads/<?php echo $data['gambar']; ?>" class="gambar-buku-sm"/></td>
-                        <td><?php echo $data['status'] == 1 ? "Sedang dipinjam" : "Sudah dikembalikan"; ?></td>
-                        <td><?php echo date('j F Y', strtotime($data['tanggal_kembali'])); ?></td>
-                        <td>
+                        <td style="text-align:center"><img src="../uploads/<?php echo $data['gambar']; ?>" class="gambar-buku-sm"/></td>
+                        <td style="text-align:center"><?php echo $data['status'] == 1 ? "Sedang dipinjam" : "Sudah dikembalikan"; ?></td>
+                        <td style="text-align:center"><?php echo date('j F Y', strtotime($data['tanggal_kembali'])); ?></td>
+                        <td style="text-align:center">
                         <?php if($data["status"] == 1) { ?>
-                            <button onclick="pinjamBuku(this);" class="btn btn-light" data-json='<?php echo json_encode($data); ?>'>
+                            <button onclick="pengembalianBuku(this);" class="btn btn-light" data-json='<?php echo json_encode($data); ?>'>
                                 <img src="../assets/images/mc-icons/enchanted_book.png" class="mc-icon" width="30rem" />
                             </button>
                         <?php } ?>
@@ -58,7 +58,6 @@
         </tbody>
     </table>
 </div>
-
 
 <?php include '../components/footer.php'; ?>
 
@@ -82,7 +81,7 @@
 </div>
 
 <script>
-    function pinjamBuku(element) {
+    function pengembalianBuku(element) {
         var data = JSON.parse(element.getAttribute('data-json'));
         document.getElementById('namaBuku').innerHTML = data.judul;
         document.getElementById('idPeminjaman').value = data.id_peminjaman;

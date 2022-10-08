@@ -1,11 +1,12 @@
 <?php
 session_start();
 
-if($_SESSION["user"]["role"] ?? false == "admin"){
-    header("Location: ./HomeAdmin.php");
-} else if($_SESSION["user"]["role"] ?? false == "user"){
-    header("Location: ./HomeUser.php");
-} else {
+if(!isset($_SESSION["user"]["role"])) {
     header("Location: ./LoginPage.php");
+}
+if(($_SESSION["user"]["role"] ?? "") === "admin"){
+    header("Location: ./HomeAdmin.php");
+} else if(($_SESSION["user"]["role"] ?? "") === "user"){
+    header("Location: ./HomeUser.php");
 }
 ?>

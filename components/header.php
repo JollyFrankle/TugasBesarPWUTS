@@ -16,6 +16,8 @@ require '../db.php';
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 	<link href="../assets/css/style.css" rel="stylesheet">
+	<!-- icon -->
+	<link rel="icon" href="../assets/images/mc-icons/bookshelf.png">
 	<title>Dashboard</title>
 </head>
 
@@ -55,6 +57,18 @@ require '../db.php';
 								Daftar Peminjaman
 							</a>
 						</li>
+						<li>
+							<a href="../page/DaftarReservasiRuangPage.php" class="nav-link text-white">
+								<img src="../assets/images/mc-icons/feather.png" class="nav-icons mc-icon" style="margin-right:0.5rem;">
+								Daftar Reservasi
+							</a>
+						</li>
+						<li>
+							<a href="../page/ListSaranKritikPage.php" class="nav-link text-white">
+								<img src="../assets/images/mc-icons/birch_sign.png" class="nav-icons mc-icon" style="margin-right:0.5rem;">
+								Saran Kritik
+							</a>
+						</li>
 					</ul>
 				<?php } else if ($_SESSION["user"]["role"] == "admin") { ?>
 					<ul class="nav nav-pills flex-column mb-auto">
@@ -70,11 +84,22 @@ require '../db.php';
 							Tambah Buku
 						</a>
 						</li>
-
 						<li>
 							<a href="../page/CekPeminjamanPage.php" class="nav-link text-white">
 								<img src="../assets/images/icon_ender.jpg" class="nav-icons mc-icon" style="margin-right:0.5rem;">
 								Cek Peminjam
+							</a>
+						</li>
+						<li>
+							<a href="../page/DaftarReservasiAdminPage.php" class="nav-link text-white">
+								<img src="../assets/images/mc-icons/writable_book.png" class="nav-icons mc-icon" style="margin-right:0.5rem;">
+								Daftar Reservasi
+							</a>
+						</li>
+						<li>
+							<a href="../page/SaranKritikAdminPage.php" class="nav-link text-white">
+								<img src="../assets/images/mc-icons/birch_sign.png" class="nav-icons mc-icon" style="margin-right:0.5rem;">
+								Cek Kritik/Saran
 							</a>
 						</li>
 					</ul>

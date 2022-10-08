@@ -10,6 +10,9 @@ if (mysqli_connect_errno()) {
 error_reporting(E_ALL);
 
 // log errors to file
-// ini_set("log_errors", 1);
-// ini_set("error_log", __DIR__ . "/php-error.log");
+ini_set("log_errors", 1);
+ini_set("error_log", __DIR__ . "/php-error.log");
+
+// time zone jakarta
+date_default_timezone_set("Asia/Jakarta");
 ?>

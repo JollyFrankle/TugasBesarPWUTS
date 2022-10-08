@@ -1,0 +1,78 @@
+[08-Oct-2022 08:05:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php:63
+Stack trace:
+#0 C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php(63): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php on line 63
+[08-Oct-2022 08:23:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php:63
+Stack trace:
+#0 C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php(63): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php on line 63
+[08-Oct-2022 08:24:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php:63
+Stack trace:
+#0 C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php(63): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php on line 63
+[08-Oct-2022 08:41:39 Europe/Berlin] PHP Warning:  Undefined array key "role" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[08-Oct-2022 08:41:39 Europe/Berlin] PHP Warning:  Undefined array key "role" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 79
+[08-Oct-2022 08:41:39 Europe/Berlin] PHP Warning:  Undefined array key "foto" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 117
+[08-Oct-2022 08:41:39 Europe/Berlin] PHP Warning:  Undefined array key "role" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 121
+[08-Oct-2022 08:56:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php:63
+Stack trace:
+#0 C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php(63): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\TugasBesarPWUTS\process\reservasiRuangUser.php on line 63
+[08-Oct-2022 09:39:28 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[08-Oct-2022 09:39:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[08-Oct-2022 09:39:28 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 73
+[08-Oct-2022 09:39:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 73
+[08-Oct-2022 09:39:28 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 111
+[08-Oct-2022 09:39:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 111
+[08-Oct-2022 09:39:28 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 113
+[08-Oct-2022 09:39:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 113
+[08-Oct-2022 09:39:28 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 115
+[08-Oct-2022 09:39:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 115
+[08-Oct-2022 09:45:13 Europe/Berlin] PHP Warning:  Undefined array key "tanggal_kritik" in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 34
+[08-Oct-2022 09:45:13 Europe/Berlin] PHP Warning:  Undefined array key "tanggal_kritik" in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 34
+[08-Oct-2022 09:46:26 Europe/Berlin] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 33
+[08-Oct-2022 09:46:40 Europe/Berlin] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 33
+[08-Oct-2022 09:46:50 Europe/Berlin] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 33
+[08-Oct-2022 09:46:56 Europe/Berlin] PHP Notice:  Only variables should be passed by reference in C:\xampp\htdocs\TugasBesarPWUTS\process\addEditSaranKritik.php on line 41
+[08-Oct-2022 09:46:57 Europe/Berlin] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 33
+[08-Oct-2022 09:46:59 Europe/Berlin] PHP Notice:  Only variables should be passed by reference in C:\xampp\htdocs\TugasBesarPWUTS\process\addEditSaranKritik.php on line 41
+[08-Oct-2022 09:47:25 Europe/Berlin] PHP Notice:  Only variables should be passed by reference in C:\xampp\htdocs\TugasBesarPWUTS\process\addEditSaranKritik.php on line 34
+[08-Oct-2022 09:47:36 Europe/Berlin] PHP Notice:  Only variables should be passed by reference in C:\xampp\htdocs\TugasBesarPWUTS\process\addEditSaranKritik.php on line 34
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 73
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 73
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 111
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 111
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 113
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 113
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 115
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 115
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 23
+[08-Oct-2022 16:43:22 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php:24
+Stack trace:
+#0 C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php(24): mysqli_query(Object(mysqli), 'SELECT * FROM k...')
+#1 {main}
+  thrown in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 24
+[08-Oct-2022 17:01:47 Asia/Jakarta] PHP Warning:  Undefined array key "title" in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 64
+[08-Oct-2022 17:01:47 Asia/Jakarta] PHP Warning:  Undefined array key "title" in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 64
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 73
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 73
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 111
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 111
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 113
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 113
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 115
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 115
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 23
+[08-Oct-2022 17:25:05 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php:24
+Stack trace:
+#0 C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php(24): mysqli_query(Object(mysqli), 'SELECT * FROM k...')
+#1 {main}
+  thrown in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 24

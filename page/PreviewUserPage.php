@@ -29,14 +29,14 @@
     </div>
 </div>
 
-<div class="row table-responsive">
+<div class="row table-responsive" style="margin-bottom:15vw;">
     <table class="table table-hover rounded rounded-1 overflow-hidden">
         <thead class="text-nowrap">
             <tr class="table-dark">
                 <th scope="col">No</th>
                 <th scope="col">Nama Peminjam</th>
-                <th scope="col" style="text-align:center">Tanggal Pinjam</th>
-                <th scope="col" style="text-align:center">Tanggal Kembali</th>
+                <th scope="col" class="text-center">Tanggal Pinjam</th>
+                <th scope="col" class="text-center">Tanggal Kembali</th>
             </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -51,9 +51,8 @@
                     <tr>
                         <th scope="row"><?php echo $no; ?></th>
                         <td><?php echo $data['nama']; ?></td>
-                        <td style="text-align:center"><?php echo date('j F Y', strtotime($data['tanggal_pinjam'])); ?></td>
-                        <td style="text-align:center"><?php echo date('j F Y', strtotime($data['tanggal_kembali'])); ?></td>
-                        <!-- <td style="text-align:center"></td>? -->
+                        <td class="text-center"><?php echo date('j F Y', strtotime($data['tanggal_pinjam'])); ?></td>
+                        <td class="text-center"><?php echo date('j F Y', strtotime($data['tanggal_kembali'])); ?></td>
                     </tr>
             <?php $no++;
                 }
@@ -61,6 +60,6 @@
             ?>
         </tbody>
     </table>
-    </div>
+</div>
 
 <?php include '../components/footer.php'; ?>

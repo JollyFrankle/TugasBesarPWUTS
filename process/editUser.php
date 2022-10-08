@@ -100,7 +100,6 @@ if($_POST["action"] == "edit_user") {
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("ssssi", $nama, $email, $password, $fileNameNew, $_SESSION["id"]);
         } else if($fileNameNew) {
-            echo "aAAAAA";
             $sql = "UPDATE users SET `nama` = ?, `email` = ?, `foto` = ? WHERE id = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("sssi", $nama, $email, $fileNameNew, $_SESSION["id"]);

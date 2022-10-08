@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
 </div>
 <img src="../assets/images/mc-villager.png" class="villager"/>
 <hr>
-<div class="row">
+<div class="row" style="margin-bottom:15vw;">
     <form class="col-md-6 mb-3 needs-validation" method="POST" action="../process/addEditBuku.php" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="judul" class="form-label">Judul Buku</label>

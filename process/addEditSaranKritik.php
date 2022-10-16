@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!($_SESSION["id"] ?? false)) {
-	header("Location: ./loginPage.php");
+	die(json_encode(["status" => "error", "message" => "Anda tidak memiliki akses ke halaman ini"]));
 }
 
 include '../db.php';
@@ -72,7 +72,7 @@ if($_POST["action"] == "add" || $_POST["action"] == "edit") {
                     <li><?php echo $message;?></li>
                 <?php } ?>
                 </ul>
-                <a href="../page/ListSaranKritikPage.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Lihat Kritik/Saranmu</a>
+                <a href="../page/User/ListKritikSaran.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Lihat Kritik/Saranmu</a>
             </div>
             <div class="img-btmleft">
                 <img src="../assets/images/mc-villager.png" alt="Librarian villager" />

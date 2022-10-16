@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!($_SESSION["id"] ?? false)) {
-	header("Location: ./loginPage.php");
+	die(json_encode(["status" => "error", "message" => "Anda tidak memiliki akses ke halaman ini"]));
 }
 
 include '../db.php';
@@ -63,7 +63,7 @@ if($_POST["action"] == "add" || $_POST["action"] == "edit") {
     $count = $result->fetch_column();
     if($count > 0) {
         $error = true;
-        $out_msg[] = "Ruang ini sudah terpakai pada sesi tersebut!";
+        $out_msg[] = "Ruang ini sudah direservasi untuk tanggal dan sesi ini!";
     }
 
     if(!$error) {
@@ -143,7 +143,7 @@ if(($_POST["action"] ?? "") == "hapus_reservasi") {
                     <li><?php echo $message;?></li>
                 <?php } ?>
                 </ul>
-                <a href="../page/DaftarReservasiRuangPage.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Lihat Reservasi</a>
+                <a href="../page/User/ListReservasi.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Lihat Reservasi</a>
             </div>
             <div class="img-btmleft">
                 <img src="../assets/images/mc-villager.png" alt="Librarian villager" />

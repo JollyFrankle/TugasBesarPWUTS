@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!($_SESSION["id"] ?? false)) {
-	header("Location: ./loginPage.php");
+	die(json_encode(["status" => "error", "message" => "Anda tidak memiliki akses ke halaman ini"]));
 }
 
 include '../db.php';
@@ -85,7 +85,7 @@ if($_POST["action"] ?? "" == "pinjam_buku") {
             <div class="card-header bg-success bg-opacity-25 fw-bold">Peminjaman berhasil!</div>
             <div class="card-body">
                 <p class="card-text">Buku <strong><?php echo htmlspecialchars($buku["judul"]);?></strong> berhasil dipinjam dan wajib dikembalikan pada <strong><?php echo date('j F Y', strtotime($tanggal_kembali));?></strong>.</p>
-                <a href="../page/DaftarPeminjamanPage.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Lihat daftar peminjaman</a>
+                <a href="../page/User/ListPeminjaman.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Lihat daftar peminjaman</a>
             </div>
             <div class="img-btmleft">
                 <img src="../assets/images/mc-villager.png" alt="Librarian villager" />

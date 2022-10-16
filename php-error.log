@@ -76,3 +76,44 @@ Stack trace:
 #0 C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php(24): mysqli_query(Object(mysqli), 'SELECT * FROM k...')
 #1 {main}
   thrown in C:\xampp\htdocs\TugasBesarPWUTS\page\ListSaranKritikPage.php on line 24
+[16-Oct-2022 21:39:01 Asia/Jakarta] PHP Warning:  include(../components/footer.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 21:39:01 Asia/Jakarta] PHP Warning:  include(): Failed opening '../components/footer.php' for inclusion (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 21:39:24 Asia/Jakarta] PHP Warning:  include(../components/footer.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\EditBuku.php on line 54
+[16-Oct-2022 21:39:24 Asia/Jakarta] PHP Warning:  include(): Failed opening '../components/footer.php' for inclusion (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\EditBuku.php on line 54
+[16-Oct-2022 21:41:13 Asia/Jakarta] PHP Warning:  include(../components/footer.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 21:41:13 Asia/Jakarta] PHP Warning:  include(): Failed opening '../components/footer.php' for inclusion (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 21:41:26 Asia/Jakarta] PHP Warning:  include(../components/footer.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 21:41:26 Asia/Jakarta] PHP Warning:  include(): Failed opening '../components/footer.php' for inclusion (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 21:41:37 Asia/Jakarta] PHP Warning:  include(../components/footer.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 21:41:37 Asia/Jakarta] PHP Warning:  include(): Failed opening '../components/footer.php' for inclusion (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 21:41:44 Asia/Jakarta] PHP Warning:  include(../components/footer.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 21:41:44 Asia/Jakarta] PHP Warning:  include(): Failed opening '../components/footer.php' for inclusion (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 21:41:51 Asia/Jakarta] PHP Warning:  include(../components/footer.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 21:41:51 Asia/Jakarta] PHP Warning:  include(): Failed opening '../components/footer.php' for inclusion (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\Home.php on line 48
+[16-Oct-2022 22:17:21 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[16-Oct-2022 22:17:21 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[16-Oct-2022 22:17:21 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 67
+[16-Oct-2022 22:17:21 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 67
+[16-Oct-2022 22:17:21 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 105
+[16-Oct-2022 22:17:21 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 105
+[16-Oct-2022 22:17:21 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 107
+[16-Oct-2022 22:17:21 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 107
+[16-Oct-2022 22:17:21 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 109
+[16-Oct-2022 22:17:21 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 109
+[16-Oct-2022 22:17:33 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[16-Oct-2022 22:17:33 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[16-Oct-2022 22:17:33 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 67
+[16-Oct-2022 22:17:33 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 67
+[16-Oct-2022 22:17:33 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 105
+[16-Oct-2022 22:17:33 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 105
+[16-Oct-2022 22:17:33 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 107
+[16-Oct-2022 22:17:33 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 107
+[16-Oct-2022 22:17:33 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 109
+[16-Oct-2022 22:17:33 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 109
+[16-Oct-2022 22:45:23 Asia/Jakarta] PHP Notice:  Only variables should be passed by reference in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\ListReservasi.php on line 38
+[16-Oct-2022 22:45:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: mysqli_stmt::bind_param(): Argument #2 cannot be passed by reference in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\ListReservasi.php:38
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\ListReservasi.php on line 38
+[16-Oct-2022 23:07:52 Asia/Jakarta] PHP Warning:  include(../components/footer.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 43
+[16-Oct-2022 23:07:52 Asia/Jakarta] PHP Warning:  include(): Failed opening '../components/footer.php' for inclusion (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 43

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!($_SESSION["id"] ?? false)) {
-	header("Location: ./loginPage.php");
+	die(json_encode(["status" => "error", "message" => "Anda tidak memiliki akses ke halaman ini"]));
 }
 
 include '../db.php';
@@ -155,7 +155,7 @@ if($_POST["action"] == "edit_user") {
             <div class="card-header bg-success bg-opacity-25 fw-bold">Perubahan data berhasil!</div>
             <div class="card-body">
                 <p class="card-text">Silakan klik tombol ini untuk kembali ke halaman profil:</p>
-                <a href="../page/ShowProfil.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Lihat Profile</a>
+                <a href="../page/Profile/View.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Lihat Profile</a>
             </div>
             <div class="img-btmleft">
                 <img src="../assets/images/mc-villager.png" alt="Librarian villager" />

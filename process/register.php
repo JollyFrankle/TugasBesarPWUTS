@@ -3,7 +3,7 @@ include '../db.php';
 
 session_start();
 if($_SESSION["id"] ?? false){
-    header("Location: ../page/homePage.php");
+    die(json_encode(["status" => "error", "message" => "Anda tidak memiliki akses ke halaman ini"]));
 }
 
 $out_msg = ["Request method atau parameter tidak valid. Pastikan Anda mengakses halaman ini melalui form login."];
@@ -124,7 +124,7 @@ if($_POST["action"] ?? "" == "register") {
             <div class="card-header bg-success bg-opacity-25 fw-bold">Selamat datang!</div>
             <div class="card-body">
                 <p class="card-text">Silakan klik tombol di bawah ini untuk lanjut ke log in:</p>
-                <a href="../page/loginPage.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Log in</a>
+                <a href="../page/Login.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Log in</a>
             </div>
             <div class="img-btmleft">
                 <img src="../assets/images/mc-villager.png" alt="Librarian villager" />

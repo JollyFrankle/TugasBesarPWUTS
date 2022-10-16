@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!($_SESSION["id"] ?? false) || !($_SESSION["user"]["role"] ?? false == "admin")) {
-	header("Location: ./loginPage.php");
+	die(json_encode(["status" => "error", "message" => "Anda tidak memiliki akses ke halaman ini"]));
 }
 
 include '../db.php';
@@ -137,7 +137,7 @@ if($_POST["action"] == "add" || $_POST["action"] == "edit") {
                     <li><?php echo $message;?></li>
                 <?php } ?>
                 </ul>
-                <a href="../page/HomeAdmin.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Kembali ke Dashboard</a>
+                <a href="../page/Admin/Home.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Kembali ke Dashboard</a>
             </div>
             <div class="img-btmleft">
                 <img src="../assets/images/mc-villager.png" alt="Librarian villager" />

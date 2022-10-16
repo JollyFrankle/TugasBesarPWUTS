@@ -182,7 +182,7 @@ ol.list-custom>li::before {
 }
 
 .villager2 {
-    height: 220px;
+    height: 150px;
     position: fixed;
     bottom: 10px;
     right: 20px;
@@ -206,4 +206,17 @@ ol.list-custom>li::before {
     background-color: var(--bs-black);
     border-color: var(--bs-secondary);
     color: #fff;
+}
+
+/* Background */
+.nav-menu {
+    background-image: url(../images/black_concrete.png);
+    image-rendering: pixelated;
+    background-size: 6rem;
+}
+
+.main-content {
+    background-image: url(../images/white_concrete.png);
+    image-rendering: pixelated;
+    background-size: 6rem;
 }

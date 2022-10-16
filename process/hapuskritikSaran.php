@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!($_SESSION["id"] ?? false)) {
-	header("Location: ./loginPage.php");
+	die(json_encode(["status" => "error", "message" => "Anda tidak memiliki akses ke halaman ini"]));
 }
 
 include '../db.php';
@@ -65,7 +65,7 @@ if($_POST["action"] ?? "" == "hapus_kritikSaran") {
             <div class="card-header bg-success bg-opacity-25 fw-bold">Penghapusan berhasil!</div>
             <div class="card-body">
                 <p class="card-text">Penghapusan kritik saran <strong><?php echo @$kritiksaran["judul"];?></strong> berhasil dilakukan.</p>
-                <a href="../page/ListSaranKritikPage.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Ke List Saran Kritik</a>
+                <a href="../page/User/ListKritikSaran.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Ke List Saran Kritik</a>
             </div>
             <div class="img-btmleft">
                 <img src="../assets/images/mc-villager.png" alt="Librarian villager" />

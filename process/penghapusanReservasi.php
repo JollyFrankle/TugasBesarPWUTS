@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!($_SESSION["id"] ?? false)) {
-	header("Location: ./loginPage.php");
+	die(json_encode(["status" => "error", "message" => "Anda tidak memiliki akses ke halaman ini"]));
 }
 
 include '../db.php';
@@ -64,8 +64,8 @@ if($_POST["action"] ?? "" == "hapus_reservasi") {
         <div class="card" role="alert">
             <div class="card-header bg-success bg-opacity-25 fw-bold">Penghapusan berhasil!</div>
             <div class="card-body">
-                <p class="card-text">Penghapusan Reservasi ruang <strong><?php echo @$reservasi["nama_ruang"];?></strong> pada tanggal <strong><?php echo @$reservasi["tanggal"];?></strong> dan sesi <strong><?php echo @$reservasi["sesi"];?></strong> berhasil dilakukan.</p>
-                <a href="../page/DaftarReservasiRuangPage.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Ke List Reservasi Ruang Baca</a>
+                <p class="card-text">Penghapusan reservasi ruang <strong><?php echo @$reservasi["nama_ruang"];?></strong> pada tanggal <strong><?php echo @$reservasi["tanggal"];?></strong> dan sesi <strong><?php echo @$reservasi["sesi"];?></strong> berhasil dilakukan.</p>
+                <a href="../page/User/ListReservasi.php" class="btn btn-primary position-absolute" style="right: 1.25rem; bottom: 1.25rem;">Ke List Reservasi Ruang Baca</a>
             </div>
             <div class="img-btmleft">
                 <img src="../assets/images/mc-villager.png" alt="Librarian villager" />

@@ -30,11 +30,8 @@ if($_POST["action"] ?? "" === "login") {
                 $_SESSION["user"] = $user;
                 if($user["role"] === "admin") {
                     $_SESSION["admin"] = true;
-                    header("Location: ../page/HomeAdmin.php");
-                } else {
-                    header("Location: ../page/HomeUser.php");
                 }
-                exit;
+                header("Location: ../page/Home.php");
             } else {
                 $output = [
                     "code" => 401,

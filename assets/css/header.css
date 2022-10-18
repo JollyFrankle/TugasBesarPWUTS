@@ -90,3 +90,15 @@
         content: none;
     }
 }
+
+/* Custom MC-themed button */
+.btn {
+    border-radius: 0 !important;
+    border-width: 2px;
+    transition: 0s;
+}
+
+.btn:not(.btn-light) {
+/*     box-shadow: inset 0 4px rgba(255,255,255,0.25), inset 0 -4px rgba(0,0,0,.25); */
+    text-shadow: 1.5px 1.5px #000;
+}

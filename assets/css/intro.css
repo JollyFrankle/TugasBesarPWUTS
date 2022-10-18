@@ -1,0 +1,16 @@
+/* Custom MC-themed button */
+.btn {
+    border-radius: 0 !important;
+    border-width: 2px;
+    border-style: inset;
+    transition: 0s;
+}
+
+.btn:not(.btn-light) {
+    box-shadow: 0 0 0 2px #000;
+    text-shadow: 1.5px 1.5px #000;
+}
+
+.btn:not(.btn-light):hover {
+    box-shadow: 0 0 0 2px #fff;
+}

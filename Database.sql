@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 18, 2022 at 10:22 AM
+-- Generation Time: Oct 18, 2022 at 03:37 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.6
 
@@ -39,7 +39,7 @@ CREATE TABLE `buku` (
 --
 
 INSERT INTO `buku` (`id`, `judul`, `gambar`, `jumlah`) VALUES
-(1, 'The Mind of A Leader - Kevin Anderson', 'fotobuku_TheMindOfALeader.jpg', 10),
+(1, 'The Mind of A Leader - Kevin Anderson', 'fotobuku_TheMindOfALeader.jpg', 9),
 (3, 'Kereta Utara', 'fotobuku_634c2185454ad1.48936238.png', 20),
 (9, 'Moby Dick', 'fotobuku_634126ff897d79.47015435.jpg', 5),
 (10, 'Hujan - Tereliye', 'fotobuku_634c2d08e7c8e3.80052667.jpg', 44),
@@ -49,7 +49,8 @@ INSERT INTO `buku` (`id`, `judul`, `gambar`, `jumlah`) VALUES
 (14, 'Laskar Pelangi', 'fotobuku_634e5c86e54cd8.47024908.jpg', 22),
 (15, 'Lima Sekawan - Rahasia Harta Karun', 'fotobuku_634c23d4a2aef4.76512082.jpg', 58),
 (17, 'Harry Potter and the Deathly Hallows', 'fotobuku_634c24e152d553.55690791.jpg', 87),
-(18, 'Harry Potter and the Sorcerers Stone', 'fotobuku_634e5b1bc61983.05726050.jpg', 75);
+(18, 'Harry Potter and the Sorcerers Stone', 'fotobuku_634e5b1bc61983.05726050.jpg', 75),
+(23, 'Evrnt', 'fotobuku_634e72211e3824.92924874.jpg', 127);
 
 -- --------------------------------------------------------
 
@@ -131,7 +132,8 @@ INSERT INTO `peminjaman` (`id`, `id_user`, `id_buku`, `tanggal_pinjam`, `tanggal
 (42, 4, 17, '2022-10-16', '2022-10-23', 1),
 (43, 21, 3, '2022-10-18', '2022-10-18', 0),
 (46, 21, 11, '2022-10-18', '2022-10-18', 0),
-(47, 23, 18, '2022-10-18', '2022-10-18', 0);
+(47, 23, 18, '2022-10-18', '2022-10-18', 0),
+(48, 1, 1, '2022-10-18', '2022-10-25', 1);
 
 -- --------------------------------------------------------
 
@@ -169,7 +171,8 @@ INSERT INTO `reservasi_ruang_baca` (`id`, `id_user`, `id_ruang`, `tanggal`, `ses
 (24, 16, 4, '2022-10-20', 3, 2),
 (26, 21, 3, '2022-10-29', 2, 2),
 (27, 23, 2, '2022-10-19', 5, 1),
-(29, 23, 2, '2022-10-19', 5, 1);
+(29, 23, 2, '2022-10-19', 5, 1),
+(30, 1, 2, '2022-10-19', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -286,7 +289,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `kritik_saran`
@@ -298,13 +301,13 @@ ALTER TABLE `kritik_saran`
 -- AUTO_INCREMENT for table `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `reservasi_ruang_baca`
 --
 ALTER TABLE `reservasi_ruang_baca`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `ruang_baca`

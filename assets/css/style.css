@@ -171,7 +171,7 @@ ol.list-custom>li::before {
 }
 
 .villager {
-    height: 10vw;
+    height: 160px;
     position: fixed;
     bottom: 10px;
     right: 20px;
@@ -187,7 +187,7 @@ ol.list-custom>li::before {
 }
 
 .villager2 {
-    height: 150px;
+    height: 160px;
     position: fixed;
     bottom: 10px;
     right: 20px;

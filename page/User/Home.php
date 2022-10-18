@@ -2,8 +2,8 @@
 
 <!-- <div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 5px solid #000000; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> -->
 <div class="body d-flex justify-content-between">
-    <h4 class="mb-0">Daftar Buku</h4> 
-    <img src="../../assets/images/mc-villager.png"class="villager"/>
+    <h4 class="mb-0">Daftar Buku</h4>
+    <img src="../../assets/images/mc-villager.png" class="villager" />
 </div>
 <hr>
 
@@ -26,15 +26,17 @@
             <?php
             $query = mysqli_query($conn, "SELECT * FROM buku;") or
                 die(mysqli_error($conn));
-            if (mysqli_num_rows($query) == 0) {
-                echo '<tr> <td colspan="7"> Tidak ada data </td> </tr>';
-            } else {
+            if (mysqli_num_rows($query) == 0) { ?>
+                <tr>
+                    <td colspan="5" class="text-center p-4"> Tidak ada buku yang dapat dipinjam :( </td>
+                </tr>';
+                <?php } else {
                 $no = 1;
                 while ($data = mysqli_fetch_assoc($query)) { ?>
                     <tr>
                         <th scope="row" style="text-align:center"><?php echo $no; ?></th>
                         <td><?php echo $data['judul']; ?></td>
-                        <td style="text-align:center"><img src="../../uploads/<?php echo $data['gambar']; ?>" class="gambar-buku-sm"/></td>
+                        <td style="text-align:center"><img src="../../uploads/<?php echo $data['gambar']; ?>" class="gambar-buku-sm" /></td>
                         <td style="text-align:center"><?php echo $data['jumlah']; ?></td>
                         <td style="text-align:center">
                             <button onclick="pinjamBuku(this);" class="btn btn-light" data-json='<?php echo json_encode($data); ?>'>

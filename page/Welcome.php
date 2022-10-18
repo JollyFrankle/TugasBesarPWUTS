@@ -17,7 +17,7 @@
     <div class="bg bg-light text-dark">
         <div class="background-tint"></div>
         <div class="container min-vh-100 col-xxl-8 px-4 py-5 d-flex align-items-center justify-content-center">
-            <div class="card flex-lg-row-reverse align-items-center g-5 py-5 text-white bg-dark shadow" style="border-radius: 25px;" data-aos="flip-right" data-aos-duration="1500">
+            <div class="card flex-lg-row-reverse align-items-center g-5 py-5 text-white bg-dark shadow rounded-lg" data-aos="flip-right" data-aos-duration="1500">
                 <div class="col-5">
                     <img src="../assets/images/icon-villager3.png" style="height: 300px;" class="d-block mx-lg-auto img-fluid" alt="" loading="lazy">
                 </div>

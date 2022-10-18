@@ -2,7 +2,7 @@
 
 <div class="body d-flex justify-content-between">
     <h4 class="mb-0">Saran Kritik</h4>
-    <a href="./ListSaranKritikPage.php" class="btn btn-success">Kembali</a>
+    <a href="./ListKritikSaran.php" class="btn btn-success">Kembali</a>
     <img src="../../assets/images/mc-villager-new.webp" class="villager2" />
 </div>
 </div>

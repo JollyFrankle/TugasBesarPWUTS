@@ -20,7 +20,7 @@
             <?php
             $query = mysqli_query($conn, "SELECT B.*, (SELECT COUNT(P.id) FROM peminjaman P WHERE P.id_buku = B.id AND P.status = 1) AS jumlah_terpinjam FROM buku B;") or die(mysqli_error($conn));
             if (mysqli_num_rows($query) == 0) {
-                echo '<tr> <td colspan="4"> Tidak ada data </td> </tr>';
+                echo '<tr> <td colspan="5"> Tidak ada data </td> </tr>';
             } else {
                 $no = 1;
                 while ($data = mysqli_fetch_assoc($query)) { ?>

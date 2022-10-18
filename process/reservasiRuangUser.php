@@ -50,11 +50,11 @@ if($_POST["action"] == "add" || $_POST["action"] == "edit") {
     // Check akapah ruang bisa dipinjam?
     $tanggal = $tanggal->format("Y-m-d");
     if($_POST["action"] == "add") {
-        $sql = "SELECT * FROM `reservasi_ruang_baca` WHERE `tanggal` = ? AND `sesi` = ? AND `id_ruang` = ?;";
+        $sql = "SELECT * FROM `reservasi_ruang_baca` WHERE `tanggal` = ? AND `sesi` = ? AND `id_ruang` = ? AND `status` != 2;";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sii", $tanggal, $sesi, $id_ruang);
     } else {
-        $sql = "SELECT * FROM `reservasi_ruang_baca` WHERE `tanggal` = ? AND `sesi` = ? AND `id_ruang` = ? AND `id` != ?;";
+        $sql = "SELECT * FROM `reservasi_ruang_baca` WHERE `tanggal` = ? AND `sesi` = ? AND `id_ruang` = ? AND `status` != 2 AND `id` != ?;";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("siii", $tanggal, $sesi, $id_ruang, $id_reservasi);
     }

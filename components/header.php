@@ -16,6 +16,7 @@ require __DIR__.'/../db.php';
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 	<link href="../../assets/css/style.css" rel="stylesheet">
+	<link href="../../assets/css/header.css" rel="stylesheet">
 	<!-- icon -->
 	<link rel="icon" href="../../assets/images/mc-icons/bookshelf.png">
 	<title>Minecraft Library</title>
@@ -121,99 +122,4 @@ require __DIR__.'/../db.php';
 			</div>
 		</nav>
 	</div>
-
-	<style>
-		.main-body {
-			display: flex;
-			flex-flow: row;
-		}
-
-		.main-content {
-			flex: 1;
-			padding: 1.25rem;
-			width: calc(100% - var(--jc-sidebar-width));
-		}
-
-		.nav-icons {
-			display: inline-block;
-			width: 1.5rem;
-		}
-
-		.nav-item {
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			flex-shrink: 0;
-		}
-
-		.nav-menu {
-			height: 100vh;
-			flex-shrink: 0;
-			width: var(--jc-sidebar-width);
-			position: sticky;
-			top: 0;
-			z-index: 1000;
-		}
-
-		.nav-menu .nav-area {
-			margin-left: -1rem;
-			margin-right: -1rem;
-			padding-left: 1rem;
-			padding-right: 1rem;
-			/* height: 100%; */
-			overflow: auto;
-			flex-wrap: nowrap;
-		}
-
-		.nav-menu .nav-link {
-			display: flex;
-			align-items: center;
-			justify-content: flex-start;
-			transition: 0s;
-		}
-
-		.nav-menu .nav-link:hover {
-			background-color: rgba(0, 0, 0, 0.5);
-		}
-
-		.nav-menu .nav-link.active:hover {
-			background-color: var(--bs-link-hover-color);
-		}
-
-		#nav-wrapper {
-			width: 100%;
-			flex-flow: column;
-			justify-content: space-between;
-			align-items: stretch;
-		}
-
-		@media screen and (min-width: 768px) {
-			#nav-wrapper {
-				height: 100%;
-			}
-		}
-
-		@media screen and (max-width: 767.98px) {
-			.main-body {
-				flex-flow: column;
-			}
-
-			.main-content {
-				width: 100%;
-			}
-
-			.nav-menu {
-				width: 100%;
-				height: auto;
-			}
-
-			.nav-area {
-				margin-top: 1rem;
-			}
-
-			.nav-site-title::after {
-				content: none;
-			}
-		}
-	</style>
 	<main class="main-content">

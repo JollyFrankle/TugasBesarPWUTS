@@ -31,7 +31,7 @@ if (isset($_GET['id'])) {
         <div class="mb-3">
             <label for="id_ruang" class="form-label">Pilih Ruang</label>
             <select class="form-select" name="id_ruang" id="id_ruang" onchange="preview()"  required>
-                <option disabled selected hidden> Pilih Ruangan </option>
+                <option disabled selected hidde value=""n> Pilih Ruangan </option>
                 <?php
                     $query = mysqli_query($conn, "SELECT * FROM ruang_baca;") or die(mysqli_error($conn));
                     while ($data = mysqli_fetch_assoc($query)) { ?>
@@ -54,7 +54,7 @@ if (isset($_GET['id'])) {
         <div class="mb-3">
             <label for="sesi" class="form-label">Waktu Peminjaman</label>
             <select class="form-select" name="sesi" id="sesi" required>
-                <option disabled selected hidden> Pilih Waktu Peminjaman </option>
+                <option disabled selected hidden value=""> Pilih Waktu Peminjaman </option>
             <?php foreach ($sesi as $key => $value) { ?>
                 <option value="<?php echo $key; ?>" <?php echo ($reservasi['sesi'] == $key ) ? "selected" : ''; ?> > <?php echo $value; ?> </option>
             <?php } ?>

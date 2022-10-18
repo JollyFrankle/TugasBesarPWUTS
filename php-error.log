@@ -117,3 +117,129 @@ Stack trace:
   thrown in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\ListReservasi.php on line 38
 [16-Oct-2022 23:07:52 Asia/Jakarta] PHP Warning:  include(../components/footer.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 43
 [16-Oct-2022 23:07:52 Asia/Jakarta] PHP Warning:  include(): Failed opening '../components/footer.php' for inclusion (include_path='\xampp\php\PEAR') in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 43
+[16-Oct-2022 23:39:50 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[16-Oct-2022 23:39:50 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 40
+[16-Oct-2022 23:39:50 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 67
+[16-Oct-2022 23:39:50 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 67
+[16-Oct-2022 23:39:50 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 105
+[16-Oct-2022 23:39:50 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 105
+[16-Oct-2022 23:39:50 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 107
+[16-Oct-2022 23:39:50 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 107
+[16-Oct-2022 23:39:50 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 109
+[16-Oct-2022 23:39:50 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 109
+[16-Oct-2022 23:39:50 Asia/Jakarta] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\ListKritikSaran.php on line 11
+[18-Oct-2022 13:21:03 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:21:03 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:21:03 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:21:03 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:21:03 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:21:03 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:21:03 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:21:03 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:21:03 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:21:03 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:18 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 3
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 17
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 22
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 22
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\View.php on line 3
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\View.php on line 15
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\View.php on line 18
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\View.php on line 18
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\View.php on line 19
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\View.php on line 19
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TugasBesarPWUTS\page\Admin\ListKritikSaran.php on line 11
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:22:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 3
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 17
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 22
+[18-Oct-2022 13:27:05 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\page\Profile\Edit.php on line 22
+[18-Oct-2022 14:10:55 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 14:10:55 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 14:10:55 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 14:10:55 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 14:10:55 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 14:10:55 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 14:10:55 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 14:10:55 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 14:10:55 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 14:10:55 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 14:54:35 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 14:54:35 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 41
+[18-Oct-2022 14:54:35 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 14:54:35 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 68
+[18-Oct-2022 14:54:35 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 14:54:35 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 106
+[18-Oct-2022 14:54:35 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 14:54:35 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 108
+[18-Oct-2022 14:54:35 Asia/Jakarta] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110
+[18-Oct-2022 14:54:35 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TugasBesarPWUTS\components\header.php on line 110

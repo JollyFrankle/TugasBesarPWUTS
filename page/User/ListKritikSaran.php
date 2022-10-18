@@ -7,13 +7,17 @@
 </div>
 </div>
 <hr>
-<div class="row" data-masonry='{"percentPosition": true }'>
+<div class="row" data-masonry='{"percentPosition": true }' style="margin-bottom: 15vw;">
     <?php
     $id_user = $_SESSION['id'];
     $query = mysqli_query($conn, "SELECT * FROM kritik_saran WHERE id_user = $id_user;") or die(mysqli_error($conn));
-    if (mysqli_num_rows($query) == 0) {
-        echo '<tr> <td colspan="7"> Tidak ada data </td> </tr>';
-    } else {
+    if (mysqli_num_rows($query) == 0) { ?>
+        <div class="col">
+            <div class="alert alert-warning" role="alert">
+                Anda belum pernah mengirimkan kritik dan saran
+            </div>
+        </div>
+    <?php } else {
         $no = 1;
         while ($data = mysqli_fetch_assoc($query)) { ?>
             <div class="col-md-6">
@@ -34,7 +38,7 @@
                             </div>
                         </div>
 
-                        <p class="card-text" style="text-align: justify;"><?php echo $data['konten']; ?></p>
+                        <p class="card-text" style="text-align: justify;"><?php echo nl2br($data['konten']); ?></p>
                     </div>
                 </div>
             </div>

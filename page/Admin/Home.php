@@ -1,7 +1,7 @@
 <?php include '../../components/header.php'; ?>
 <div class="body d-flex justify-content-between">
     <h4 class="mb-0">Home Admin</h4>
-    <img src="../../assets/images/mc-villager.png" class="villager"/>
+    <img src="../../assets/images/mc-villager.png" class="villager" onclick="playSound()"/>
 </div>
 <hr>
 <div class="table-responsive" style="margin-bottom:15vw;">
@@ -74,4 +74,11 @@
         bootstrap.Modal.getOrCreateInstance(document.getElementById("hapusModal")).show();
         // $('#pengembalianModal').modal('show');
     }
+</script>
+
+<script>
+    // function playSound() {
+    //     var snd = new Audio("../../assets/audio/hmmm.mp3");  
+    //     snd.play();
+    // }
 </script>

@@ -9,6 +9,7 @@ $sesi = [
 ?>
 <div class="d-flex justify-content-between align-items-center">
     <h4 class="mb-0">Reservasi Ruang Baca</h4>
+    <a href="javascript:window.history.back();" class="btn btn-success">Kembali</a>
 </div>
 <img src="../../assets/images/mc-villager.png" class="villager" />
 <hr>
@@ -21,7 +22,7 @@ $sesi = [
         <div class="mb-3">
             <label for="id_ruang" class="form-label">Pilih Ruang</label>
             <select class="form-select" name="id_ruang" id="id_ruang" required>
-                <option disabled selected hidden> Pilih Ruangan </option>
+                <option disabled selected hidden value=""> Pilih Ruangan </option>
                 <?php
                     $query = mysqli_query($conn, "SELECT * FROM ruang_baca;") or die(mysqli_error($conn));
                     while ($data = mysqli_fetch_assoc($query)) { ?>
@@ -47,7 +48,7 @@ $sesi = [
         <div class="mb-3">
             <label for="sesi" class="form-label">Sesi Peminjaman</label>
             <select class="form-select" name="sesi" id="sesi" required>
-                <option disabled selected hidden> Pilih Sesi Peminjaman </option>
+                <option disabled selected hidden value=""> Pilih Sesi Peminjaman </option>
             <?php foreach ($sesi as $key => $value) { ?>
                 <option value="<?php echo $key; ?>"><?php echo $value; ?> </option>
             <?php } ?>

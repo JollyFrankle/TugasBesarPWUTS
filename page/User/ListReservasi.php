@@ -74,7 +74,7 @@ $sesi = [
                         <div class="carousel-caption d-none d-md-block bg-black bg-opacity-50 px-2">
                             <h5><?php echo $row["nama_ruang"]; ?></h5>
                             <p class="mb-2"><?php echo $row['deskripsi']; ?></p>
-                            <p class="mb-0 small text-light">Kapasitas: <strong><?php echo $row["kapasitas"];?> orang</strong></p>
+                            <p class="mb-0 small text-light">Kapasitas: <strong><?php echo $row["kapasitas"]; ?> orang</strong></p>
                         </div>
                     </div>
                 <?php } ?>
@@ -132,23 +132,25 @@ $sesi = [
             $stmt->bind_param("si", $tanggal_hari_ini, $_SESSION['id']);
             $stmt->execute();
             $result = $stmt->get_result();
-            if ($result->num_rows == 0) {
-                echo '<tr> <td colspan="7"> Tidak ada data </td> </tr>';
-            } else {
+            if ($result->num_rows == 0) { ?>
+                <tr>
+                    <td colspan="7" class="text-center p-4"> Anda belum melakukan reservasi </td>
+                </tr>
+                <?php } else {
                 $no = 1;
                 while ($data = mysqli_fetch_assoc($result)) {
                     $sudah_lewat = strtotime($data["tanggal"]) < time();
-                    ?>
-                    <tr class="text-center <?php if($sudah_lewat) echo 'opacity-50';?>">
+                ?>
+                    <tr class="text-center <?php if ($sudah_lewat) echo 'opacity-50'; ?>">
                         <th scope="row"><?php echo $no; ?></th>
                         <td>
                             <img src="../../assets/images/ruang-baca/<?php echo $data['gambar']; ?>" class="rounded mb-1 gambar-ruang-sm" />
                             <p class="mb-0"><?php echo $data['nama_ruang']; ?></p>
                         </td>
                         <td><?php echo date('j F Y', strtotime($data['tanggal'])); ?></td>
-                        <td class="text-center"><?php echo $sesi[ $data['sesi'] ]?> </td>
+                        <td class="text-center"><?php echo $sesi[$data['sesi']] ?> </td>
                         <td class="text-center">
-                        <?php
+                            <?php
                             if ($data['status'] == 2) { ?>
                                 <div class="text-bg-danger py-1 px-2 rounded">Reservasi Ditolak</div>
                             <?php } else if ($data['status'] == 1) { ?>
@@ -156,17 +158,18 @@ $sesi = [
                             <?php } else { ?>
                                 <div class="text-bg-light py-1 px-2 rounded">Belum Diverifikasi</div>
                             <?php }
-                        ?></td>
+                            ?>
+                        </td>
                         <td>
-                        <?php if ($data['status'] === 0 && !$sudah_lewat) { ?>
-                            <a href='./EditReservasi.php?id=<?php echo $data['id_reservasi']; ?>' class="btn btn-light">
-                                <img src="../../assets/images/mc-icons/netherite_pickaxe.png" class="mc-icon" width="30rem" />
-                            </a>
+                            <?php if ($data['status'] === 0 && !$sudah_lewat) { ?>
+                                <a href='./EditReservasi.php?id=<?php echo $data['id_reservasi']; ?>' class="btn btn-light">
+                                    <img src="../../assets/images/mc-icons/netherite_pickaxe.png" class="mc-icon" width="30rem" />
+                                </a>
 
-                            <button onclick="hapusReservasi(this);" class="btn btn-light" data-json='<?php echo json_encode($data); ?>'>
-                                <img src="../../assets/images/mc-icons/barrier.png" class="mc-icon" width="30rem" />
-                            </button>
-                        <?php } ?>
+                                <button onclick="hapusReservasi(this);" class="btn btn-light" data-json='<?php echo json_encode($data); ?>'>
+                                    <img src="../../assets/images/mc-icons/barrier.png" class="mc-icon" width="30rem" />
+                                </button>
+                            <?php } ?>
                         </td>
                     </tr>
             <?php $no++;

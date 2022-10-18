@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2022 at 06:31 PM
+-- Generation Time: Oct 18, 2022 at 10:22 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.6
 
@@ -41,15 +41,15 @@ CREATE TABLE `buku` (
 INSERT INTO `buku` (`id`, `judul`, `gambar`, `jumlah`) VALUES
 (1, 'The Mind of A Leader - Kevin Anderson', 'fotobuku_TheMindOfALeader.jpg', 10),
 (3, 'Kereta Utara', 'fotobuku_634c2185454ad1.48936238.png', 20),
-(9, 'Moby Dick', 'fotobuku_634126ff897d79.47015435.jpg', 4),
+(9, 'Moby Dick', 'fotobuku_634126ff897d79.47015435.jpg', 5),
 (10, 'Hujan - Tereliye', 'fotobuku_634c2d08e7c8e3.80052667.jpg', 44),
 (11, 'Lima Sekawan - Di Pulau Seram', 'fotobuku_634c1da3cf96c0.12970370.jpg', 33),
 (12, 'Pergi - Tereliye', 'fotobuku_634c2029a05a55.97298109.jpg', 77),
 (13, 'Pulang - Tereliye', 'fotobuku_634c20a50b5dd3.95476777.jpg', 56),
-(14, 'Laskar Pelangi', 'fotobuku_634c22448daaa8.18978897.jpg', 22),
+(14, 'Laskar Pelangi', 'fotobuku_634e5c86e54cd8.47024908.jpg', 22),
 (15, 'Lima Sekawan - Rahasia Harta Karun', 'fotobuku_634c23d4a2aef4.76512082.jpg', 58),
 (17, 'Harry Potter and the Deathly Hallows', 'fotobuku_634c24e152d553.55690791.jpg', 87),
-(18, 'Harry Potter and the Sorcerers Stone', 'fotobuku_634c254b925055.15884508.jpg', 73);
+(18, 'Harry Potter and the Sorcerers Stone', 'fotobuku_634e5b1bc61983.05726050.jpg', 75);
 
 -- --------------------------------------------------------
 
@@ -77,7 +77,8 @@ INSERT INTO `kritik_saran` (`id`, `id_user`, `judul`, `konten`, `tanggal_kirim`)
 (17, 4, 'hehe', 'Penjaga perpusnya ganteng banget 11/10 la :3', '2022-10-08 14:51:28'),
 (18, 16, 'Saran', 'perlu diupayakan peningkatan aspek fisik perpustakaan yang ideal sehingga diharapkan tercipta kondisi ruang perpustakaan yang kondusif untuk pengguna perpustakaan.', '2022-10-08 17:10:38'),
 (19, 10, 'Pujian untuk Perpus', 'perpustakan ini sangat menginspirasi saya untuk menjadi perpustakawan, karena para pengursu disini sangat baik baik dan memiliki atitude. Lalu buku buku disini sangat banyak dan menarik', '2022-10-08 17:09:44'),
-(25, 4, 'Kritik perpustakaan', 'pada perpustakaan ini tempatnya kotor dan tidak rapi. banyak sampah berceceran di lantai, permen karet di bawah meja, dan banyak buku yang sobek dan rusak. Penjaganya juga tidak waras. ', '2022-10-16 23:06:14');
+(25, 4, 'Kritik perpustakaan', 'pada perpustakaan ini tempatnya kotor dan tidak rapi. banyak sampah berceceran di lantai, permen karet di bawah meja, dan banyak buku yang sobek dan rusak. Penjaganya juga tidak waras. ', '2022-10-16 23:06:14'),
+(30, 23, 'Buki bsnyak yang sudah rusak', 'Buku Laskar Pelangi sampulnya sudah banyak yang rusak, banyak hakaman yang hilang juga...\r\n\r\nTolong kalau tidak berniat buka perpustakaan, jangan dibuka.', '2022-10-18 15:15:20');
 
 -- --------------------------------------------------------
 
@@ -119,7 +120,7 @@ INSERT INTO `peminjaman` (`id`, `id_user`, `id_buku`, `tanggal_pinjam`, `tanggal
 (30, 16, 10, '2022-10-08', '2022-10-16', 0),
 (31, 4, 10, '2022-10-08', '2022-10-16', 0),
 (32, 19, 10, '2022-10-08', '2022-10-15', 1),
-(33, 4, 9, '2022-10-08', '2022-10-15', 1),
+(33, 4, 9, '2022-10-08', '2022-10-18', 0),
 (34, 10, 1, '2022-10-08', '2022-10-08', 0),
 (36, 10, 10, '2022-10-09', '2022-10-09', 0),
 (37, 10, 1, '2022-10-09', '2022-10-09', 0),
@@ -127,7 +128,10 @@ INSERT INTO `peminjaman` (`id`, `id_user`, `id_buku`, `tanggal_pinjam`, `tanggal
 (39, 10, 10, '2022-10-16', '2022-10-16', 0),
 (40, 4, 17, '2022-10-16', '2022-10-16', 0),
 (41, 4, 18, '2022-10-16', '2022-10-23', 1),
-(42, 4, 17, '2022-10-16', '2022-10-23', 1);
+(42, 4, 17, '2022-10-16', '2022-10-23', 1),
+(43, 21, 3, '2022-10-18', '2022-10-18', 0),
+(46, 21, 11, '2022-10-18', '2022-10-18', 0),
+(47, 23, 18, '2022-10-18', '2022-10-18', 0);
 
 -- --------------------------------------------------------
 
@@ -154,13 +158,18 @@ INSERT INTO `reservasi_ruang_baca` (`id`, `id_user`, `id_ruang`, `tanggal`, `ses
 (6, 16, 2, '2022-10-09', 2, 1),
 (7, 16, 3, '2022-10-09', 1, 1),
 (8, 4, 3, '2022-10-23', 3, 1),
-(9, 10, 2, '2022-10-19', 3, 1),
+(9, 10, 2, '2022-10-19', 3, 2),
 (10, 10, 2, '2022-10-15', 3, 0),
 (13, 16, 4, '2022-10-09', 1, 1),
 (15, 4, 4, '2022-10-09', 3, 1),
 (19, 4, 2, '2022-10-19', 4, 2),
 (20, 16, 2, '2022-10-11', 2, 2),
-(21, 4, 2, '2022-11-05', 2, 2);
+(21, 4, 2, '2022-11-05', 2, 2),
+(23, 16, 2, '2022-10-29', 5, 0),
+(24, 16, 4, '2022-10-20', 3, 2),
+(26, 21, 3, '2022-10-29', 2, 2),
+(27, 23, 2, '2022-10-19', 5, 1),
+(29, 23, 2, '2022-10-19', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -213,11 +222,14 @@ INSERT INTO `users` (`id`, `email`, `password`, `nama`, `foto`, `role`) VALUES
 (12, 'jollyfrankle4@gmail.com', '$2y$10$ESeBFmjZPXJzZMIqja4b/.TC6UB5PtpF7w4T0XwkPgcHboSfv97ta', 'qweqe', 'fotouser_6337b71e074270.37070299.png', 'user'),
 (14, '123@ee.ww', '$2y$10$pcwDS49NB7NPTG8FPxjK4ex6bR21lc9MrGfQhajFBA.3bHhq3FQRC', '123', 'fotouser_6337d00c434b63.41400932.png', 'user'),
 (15, 'krisna@gmail.com', '$2y$10$zmS1q2zOMojIrntBnic32eE8p9wW1LawEzrXuKt.brQHAZtXN/5Mm', 'krisnarata', 'fotouser_6337d021cfff12.29895413.jpg', 'user'),
-(16, 'krisnarata2@gmail.com', '$2y$10$P9CRL04ERpeHrArfF.Dw2uJACYGqS9gLww91l7U3G5qZqoTfDgMfy', 'krisna', 'fotouser_6337fe265d2e48.49849435.jpg', 'user'),
+(16, 'krisnarata2@gmail.com', '$2y$10$P9CRL04ERpeHrArfF.Dw2uJACYGqS9gLww91l7U3G5qZqoTfDgMfy', 'krisnarata', 'fotouser_6337fe265d2e48.49849435.jpg', 'user'),
 (17, 'User@gmail.com', '$2y$10$49h9q0xgqQd92YCJ7gLA2OEfLBapRebwiCPQfgICHVbZj3lbiCt26', 'User', 'fotouser_63380bdb066974.63308337.jpg', 'user'),
 (18, 'danielricky1404@yahoo.com', '$2y$10$Sr80Ogl1Dc7MUY9cKGuya.VSiSyruy9B60e.8eXtyx7hInWlmzmoe', 'Daniel Ricky Alexander', 'fotouser_63380cb37565f7.89475995.png', 'user'),
 (19, 'Email@mail.com', '$2y$10$fzAYc45LDCQm6sQQJ4utOeLglPfeL8nRWUpqYp5HvjsqX79eySCq6', 'User', 'fotouser_634128b7839327.61839312.jpg', 'user'),
-(20, '123@r', '$2y$10$R01gdGgpSBCrvzhKBBI4G.4hbjM0lzX4V0OsuSd9Ot6FyAR22Fx92', '123', 'fotouser_634128c1e61392.97962267.png', 'user');
+(20, '123@r', '$2y$10$R01gdGgpSBCrvzhKBBI4G.4hbjM0lzX4V0OsuSd9Ot6FyAR22Fx92', '123', 'fotouser_634128c1e61392.97962267.png', 'user'),
+(21, 'Ricky@email.com', '$2y$10$BEgtO072YnCoCQHBppkp.OiBslWyoWI8kSj0QQLDOTRB8fS4LJzTa', 'Ricky', 'fotouser_634e3e4c3383a5.82693512.jpg', 'user'),
+(22, 'Ricky@gmail.com', '$2y$10$KXBDhBo2L.Q1H8ApEBSHHuQA63WvIPTjUwI3JQGY8lJYk0M81zI0e', 'Daniel Ricky Alexander', 'fotouser_634e3f2a328cd8.89214574.jpg', 'user'),
+(23, 'vincent01sj@gmail.com', '$2y$10$lAeIX2ayRt3jBN5EmjjZmefCJLhV7tknddqmODPtSzfFRKvb90nnq', 'Vingent Sadja', 'fotouser_634e46b4f1c258.07200615.jpg', 'user');
 
 --
 -- Indexes for dumped tables
@@ -274,25 +286,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `kritik_saran`
 --
 ALTER TABLE `kritik_saran`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `reservasi_ruang_baca`
 --
 ALTER TABLE `reservasi_ruang_baca`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `ruang_baca`
@@ -304,7 +316,7 @@ ALTER TABLE `ruang_baca`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Constraints for dumped tables
